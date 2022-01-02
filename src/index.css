@@ -13,3 +13,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.mint-container {
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: auto;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.bg-aquamarine {
+  background-color: aquamarine;
+}

@@ -166,15 +166,8 @@ const Home = (props: HomeProps) => {
   ]);
 
   return (
-    <div className="col-12 col-md-6 col-lg-3">
+    <main>
       <div className="mint-container">
-      {isSoldOut ? (
-          <img className="circle bg-aquamarine mb-5" width="100%" src="/images/sold-out.png" alt="kostar #0"></img>
-        ) : (
-          <img className="circle bg-aquamarine mb-5" width="100%" src="/images/0.png" alt="kostar #0"></img>
-        )
-      }
-        <h1 className="mb-4">10g Gold Sol</h1>
       {wallet && (
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
       )}
@@ -189,11 +182,7 @@ const Home = (props: HomeProps) => {
 
       <MintContainer>
         {!wallet ? (
-          <ConnectButton className="btn btn-primary">
-            
-              Connect Wallet
-         
-        </ConnectButton>
+          <ConnectButton>Connect Wallet</ConnectButton>
         ) : (
           <MintButton
             disabled={isSoldOut || isMinting || !isActive}
@@ -233,7 +222,7 @@ const Home = (props: HomeProps) => {
         </Alert>
       </Snackbar>
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -174,7 +174,8 @@ const Home = (props: HomeProps) => {
           <img className="circle bg-aquamarine mb-5" width="100%" src="/images/0.png" alt="kostar #0"></img>
         )
       }
-        <h1 className="mb-4">10g Gold Sol</h1>
+      
+        <h1 className="mb-4">250g Gold Sol</h1>
       {wallet && (
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
       )}
